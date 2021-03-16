@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block head_title %}About Ninja{% endblock head_title %}
+
+{% block main_title %}About{% endblock main_title %}
+
+{% block content %}
+<p>Hello, my name is {{user_name}}!</p>
+{% if mood %}
+<p>I am {{mood}}!</p>
+{% endif %}
+<h2>Languages</h2>
+<ul>
+  {% for language in languages %}
+  <li>{{language}}</li>
+  {% endfor %}
+</ul>
+{% endblock content %}
